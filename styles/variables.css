@@ -12,3 +12,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Press Start 2P", system-ui;
+  background-color: var(--black);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header,
+footer {
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+a:hover {
+  color: var(--light-gray);
+}

@@ -1,0 +1,13 @@
+@import url(./variables.css);
+
+.board {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4px;
+  .square {
+    background-color: var(--black);
+    width: 200px;
+    height: 200px;
+  }
+}
