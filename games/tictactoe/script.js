@@ -31,6 +31,9 @@ const checkWin = function (player) {
       board[combination[1]] === player &&
       board[combination[2]] === player
     ) {
+      squaresElements[combination[0]].style.color = "green";
+      squaresElements[combination[1]].style.color = "green";
+      squaresElements[combination[2]].style.color = "green";
       return true;
     }
   }
@@ -46,10 +49,11 @@ const checkTie = function () {
 
 const startGame = function () {
   game = true;
-  let currentPlayer = players[0];
-  let board = ["", "", "", "", "", "", "", "", ""];
+  currentPlayer = players[0];
+  board = ["", "", "", "", "", "", "", "", ""];
   for (let square of squaresElements) {
     square.innerText = "";
+    square.style.color = "#faf0e6";
   }
   displayCurrentTurn();
 };
