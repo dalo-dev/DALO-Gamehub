@@ -24,3 +24,10 @@ a {
 a:hover {
   color: var(--light-gray);
 }
+
+.games {
+  margin: 1rem 0;
+  a {
+    padding: 1rem 0;
+  }
+}
