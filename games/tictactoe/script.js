@@ -44,6 +44,16 @@ const checkTie = function () {
   return true;
 };
 
+const startGame = function () {
+  game = true;
+  let currentPlayer = players[0];
+  let board = ["", "", "", "", "", "", "", "", ""];
+  for (let square of squaresElements) {
+    square.innerText = "";
+  }
+  displayCurrentTurn();
+};
+
 for (let squareId = 0; squareId < squaresElements.length; squareId++) {
   squaresElements[squareId].addEventListener("click", () => {
     if (game) {
@@ -64,3 +74,5 @@ for (let squareId = 0; squareId < squaresElements.length; squareId++) {
     }
   });
 }
+
+startGame();
