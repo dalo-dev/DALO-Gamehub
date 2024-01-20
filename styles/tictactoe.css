@@ -1,8 +1,25 @@
 @import url(./variables.css);
 
-#player-turn {
+.info-container {
   text-align: center;
-  margin-bottom: 3rem;
+  #player-turn {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  .reset-button {
+    background: transparent;
+    font-family: "Press Start 2P", system-ui;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  .reset-button:hover {
+    color: var(--light-gray);
+    border-color: var(--light-gray);
+  }
 }
 
 .board {

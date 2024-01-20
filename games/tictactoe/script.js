@@ -15,6 +15,7 @@ let board = ["", "", "", "", "", "", "", "", ""];
 
 const squaresElements = document.getElementsByClassName("square");
 const turnElement = document.getElementById("player-turn");
+const resetElement = document.getElementById("reset-btn");
 
 const displayCurrentTurn = function () {
   turnElement.innerText = `${currentPlayer}'s turn!`;
@@ -56,6 +57,7 @@ const startGame = function () {
     square.style.color = "#faf0e6";
   }
   displayCurrentTurn();
+  resetElement.classList.add("hidden");
 };
 
 for (let squareId = 0; squareId < squaresElements.length; squareId++) {
@@ -67,9 +69,11 @@ for (let squareId = 0; squareId < squaresElements.length; squareId++) {
         if (checkWin(currentPlayer)) {
           game = false;
           turnElement.innerHTML = `${currentPlayer} won`;
+          resetElement.classList.remove("hidden");
         } else if (checkTie()) {
           game = false;
           turnElement.innerHTML = "TIE";
+          resetElement.classList.remove("hidden");
         } else {
           updatePlayer();
           displayCurrentTurn();
