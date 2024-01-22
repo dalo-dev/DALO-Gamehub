@@ -1,3 +1,5 @@
+"use strict";
+
 let game = true;
 const players = ["X", "O"];
 const winningCombinations = [
